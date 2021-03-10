@@ -1,0 +1,19 @@
+package strings;
+
+public class DuplicateChar {
+
+	public static void main(String[] args) {
+		// how to find duplicate characters and their count
+		String str="pabccbcaaa";
+		int count=0;
+		for(int i=0;i<str.length();i++)
+		{
+			for(int x=i+1;x<str.length();x++)
+			{
+			if(str.charAt(i)==str.charAt(x))
+				count++;
+			}
+	System.out.println("count of "+str.charAt(i)+ " is "+count);
+		}
+	}
+}

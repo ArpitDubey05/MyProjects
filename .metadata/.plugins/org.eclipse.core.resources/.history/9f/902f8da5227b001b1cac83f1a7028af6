@@ -1,0 +1,17 @@
+package practice;
+
+public class Test {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		String s="{{}}{{}{}";
+		int l=s.length();
+		if (s.charAt(1)=='}' || s.charAt(l-1)=='{' )
+		{
+			System.out.println("String is not balanced ");
+		}
+		
+	}
+
+}

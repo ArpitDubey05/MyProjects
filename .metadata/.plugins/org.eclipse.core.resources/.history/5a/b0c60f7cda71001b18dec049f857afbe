@@ -1,0 +1,61 @@
+package stepDefinition;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import io.cucumber.java.en.Given;
+import io.cucumber.java.en.Then;
+import io.cucumber.java.en.When;
+import io.restassured.builder.RequestSpecBuilder;
+import io.restassured.builder.ResponseSpecBuilder;
+import io.restassured.http.ContentType;
+import io.restassured.specification.RequestSpecification;
+import io.restassured.specification.ResponseSpecification;
+import serialization.Location;
+import serialization.Searializable;
+
+public class StepDefinition {
+
+	@Given("Add Place Payload")
+	public void add_place_payload() {
+		 System.out.println("Under given condition");
+		 Searializable s=new Searializable();
+			s.setAccuracy(50);
+			s.setAddress("29, side layout, cohen 09");
+			s.setLanguage("French-IN");
+			s.setName("Frontline house");
+			s.setPhone_number("(+91) 983 893 3937");
+			s.setWebsite("http://google.com");
+			Location l=new Location();
+			
+			l.setLat(-38.383494);
+			l.setLng(33.427362);
+			s.setLocation(l);
+			
+			List<String> list=new ArrayList<String>();
+			list.add("shoe park");
+			list.add("shop");
+			s.setTypes(list);
+			
+			RequestSpecification req= new RequestSpecBuilder().setBaseUri("https://rahulshettyacademy.com").setContentType(ContentType.JSON).addQueryParam("keys", "qaclick123").build();
+			ResponseSpecification res=new ResponseSpecBuilder().expectStatusCode(200).expectContentType(ContentType.JSON).build();
+	}
+
+
+	//Some other steps were also undefined:
+
+	@When("user post HTTP {string} request")
+	public void user_post_http_request(String string) {
+	   System.out.println("Under when condition");
+	}
+	@Then("call success with {int}")
+	public void call_success_with(Integer int1) {
+	   System.out.println("Under then condition");
+	}
+	@Then("{string} in response body is {string}")
+	public void in_response_body_is(String string, String string2) {
+	    System.out.println("under then condition");
+	}
+
+
+}

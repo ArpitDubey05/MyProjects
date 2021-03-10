@@ -1,0 +1,34 @@
+package jiraRestassured;
+
+import io.restassured.RestAssured;
+import io.restassured.filter.session.SessionFilter;
+
+public class AddComment {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+
+		RestAssured.baseURI="http://localhost:8080";
+		SessionFilter SF=new SessionFilter();
+		RestAssured.given().log().all().filter(SF).header("Content-Type","application/json")
+		.body("{ \"username\": \"dubeyarpit02\", \"password\": \"Pass@arpit123\" }")
+		.when().post("rest/auth/1/session").then().log().all().extract().response().asString();
+		
+		
+		System.out.println("Value for SF is " + SF);
+		String Response = RestAssured.given().pathParam("Key", "10004").log().all().header("Content-Type","application/json").header("Key","RES")
+				.body("{\r\n" + 
+						"    \"body\": \"i am trying to add a comment through automation\",\r\n" + 
+						"    \"visibility\": {\r\n" + 
+						"        \"type\": \"role\",\r\n" + 
+						"        \"value\": \"Administrators\"\r\n" + 
+						"    }\r\n" + 
+						"}").filter(SF)
+				.when().post("/rest/api/2/issue/{Key}/comment").then().log().all().assertThat().statusCode(201).extract().response().asString();
+		
+		System.out.println("Response is "+Response);
+		
+	}
+
+}

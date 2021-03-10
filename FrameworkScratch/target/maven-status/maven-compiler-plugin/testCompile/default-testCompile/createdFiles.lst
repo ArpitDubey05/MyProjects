@@ -1,0 +1,4 @@
+cucumber\Options\TestRunner.class
+cucumber\Options\testRunners.class
+stepDefinition\StepDefinition.class
+bddcucumber\FrameworkScratch\AppTest.class

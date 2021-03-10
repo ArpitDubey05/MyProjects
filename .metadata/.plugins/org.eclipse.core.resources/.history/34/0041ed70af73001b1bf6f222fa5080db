@@ -1,0 +1,28 @@
+package strings;
+
+import java.util.Arrays;
+
+public class DuplicateChar {
+
+	public static void main(String[] args) {
+		// how to find duplicate characters and their count
+		String str="pabccbcaaa";
+		char[] ch=str.toCharArray();
+		Arrays.sort(ch);
+		
+		for(int i=1;i<str.length();i++)
+		{
+			System.out.println(str.charAt(i));
+		}
+		int count=1;
+		for(int i=0;i<str.length();i++)
+		{
+			for(int x=i+1;x<str.length();x++)
+			{
+			if(str.charAt(i)==str.charAt(x))
+				count++;
+			}
+	System.out.println("count of "+str.charAt(i)+ " is "+count);
+		}
+	}
+}

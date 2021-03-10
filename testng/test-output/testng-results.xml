@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="9" total="11" passed="2">
+  <reporter-output>
+  </reporter-output>
+  <suite name="LoanDept" duration-ms="70" started-at="2020-08-29T23:27:37 IST" finished-at="2020-08-29T23:27:37 IST">
+    <groups>
+      <group name="Regression">
+        <method signature="test2.carloan3()[pri:0, instance:testng.test2@610694f1]" name="carloan3" class="testng.test2"/>
+        <method signature="test4.propertyloan3()[pri:0, instance:testng.test4@43814d18]" name="propertyloan3" class="testng.test4"/>
+      </group> <!-- Regression -->
+    </groups>
+    <test name="Regression" duration-ms="70" started-at="2020-08-29T23:27:37 IST" finished-at="2020-08-29T23:27:37 IST">
+      <class name="testng.test2">
+        <test-method status="PASS" signature="carloan3()[pri:0, instance:testng.test2@610694f1]" name="carloan3" duration-ms="11" started-at="2020-08-29T23:27:37 IST" finished-at="2020-08-29T23:27:37 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- carloan3 -->
+      </class> <!-- testng.test2 -->
+      <class name="testng.test4">
+        <test-method status="PASS" signature="propertyloan3()[pri:0, instance:testng.test4@43814d18]" name="propertyloan3" duration-ms="1" started-at="2020-08-29T23:27:37 IST" finished-at="2020-08-29T23:27:37 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- propertyloan3 -->
+      </class> <!-- testng.test4 -->
+    </test> <!-- Regression -->
+  </suite> <!-- LoanDept -->
+</testng-results>

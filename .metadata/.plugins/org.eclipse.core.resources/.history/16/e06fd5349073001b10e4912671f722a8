@@ -1,0 +1,30 @@
+package strings;
+
+public class FirstNonRepetitiveNO {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		String input="aabcdef";
+		char a = 0;
+		for (int i=0;i<input.length();i++)
+		{
+			for(int x=i+1;x<input.length();x++)
+			{
+				if(input.charAt(i)==input.charAt(x)) {
+					i++;
+					break;
+					}
+				else
+					if(x==input.length()-1)
+						break;
+					else
+				    a=input.charAt(i);
+			
+			}
+			//System.out.println("First unique character is "+a);
+			
+		}
+		
+	}
+
+}

@@ -1,0 +1,10 @@
+package testRunner;
+
+import org.junit.runner.RunWith;
+
+@RunWith(Cucumber.class)
+@cucumberOptions(Features="/FrameworkScratch/src/test/java/feature/placeValidation.feature")
+
+public class TestRunner {
+
+}

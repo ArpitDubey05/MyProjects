@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="LoanDept">
+  
+  
+  <test name ="Regression">
+   <classes>
+      <class name="testng.test1"/>
+      <class name="testng.test2"/>
+      <class name="testng.test3"/>
+      <class name="testng.test4"/>
+      	<groups>
+    	<run>
+    		<include name ="Regression"/>
+    	</run>
+    	</groups>
+      </classes>
+    </test>
+   
+    
+  
+</suite> 
